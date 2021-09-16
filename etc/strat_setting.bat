@@ -1,0 +1,1 @@
+npm init & npm install express --save & npm install body-parser --save & npm install serve-static --save & npm install path --save & npm install cookie-parser --save & npm install errorhandler --save & npm install express-error-handler --save & npm install express-session & npm install mongodb --save & npm install errorhandler --save & npm install error --save
