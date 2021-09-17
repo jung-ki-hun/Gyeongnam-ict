@@ -8,8 +8,12 @@ var MySQLStore = require("express-mysql-session")(session);
 var router = require(`./api/router.js`);
 var expressErrorHandler = require('express-error-handler');
 //const { error } = require("console");
+
+
 var argv_ip = process.argv[2];
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extends: true }));
 const dataset = {
 	port: 3000,
 	host: '127.0.0.1'
