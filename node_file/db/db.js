@@ -1,14 +1,8 @@
 const mysql = require('mysql');
 //const dataset = require('./app.js');
 require('dotenv').config();
-var argv_ip  = process.argv[2]
 var db_info = {
-    // host: '127.0.0.1',
-    // port: '3306',
-    // user: 'ghtest',
-    // password: 'ghtestpwd2@',
-    // database: 'ghtest_db'
-    host: '127.0.0.1',//argv_ip != '192.168.219.102' ?  '180.83.98.144':argv_ip.toString(), //'180.83.98.144' //'127.0.0.1'//'192.168.219.102'
+    host: '127.0.0.1',
     port: '3306',    
     user: process.env.NAME_DB||'root',
     password: process.env.PASS_DB||'rlgns123',
