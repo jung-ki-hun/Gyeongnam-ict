@@ -159,7 +159,7 @@ router.get('/', (req, res) => {
 /*****************************/
 /**** 공기 청정기 데시보드 ****/
 /*****************************/
-app.get('/dashboard/info1', (req, res) => {
+router.get('/dashboard/info1', (req, res) => {
 
     const response = {
       state: 1,
@@ -175,7 +175,7 @@ app.get('/dashboard/info1', (req, res) => {
       response.query = json1+"㎍/m³"; // 결과 가져오기
       //console.log(response.query)
       //return res.send(response.query)
-      return res.status(200).json(response)
+      return res.status(200).json(response);
     })
     // const date = new Date()//시간
     // response.query = date;
@@ -184,7 +184,7 @@ app.get('/dashboard/info1', (req, res) => {
     //return res.status(200).json(response);
   })//공기청정기 데이터
   
-  app.get('/dashboard/info2', (req, res) => {
+  router.get('/dashboard/info2', (req, res) => {
   
     const response = {
       state: 1,
@@ -214,7 +214,7 @@ app.get('/dashboard/info1', (req, res) => {
     return res.status(200).json(response);
   })//환경공단 미세먼지 (pm25 , 경남, 삼방동) 데이터 //일일트래픽 다씀
   
-  app.get('/dashboard/info3', (req, res) => {``
+  router.get('/dashboard/info3', (req, res) => {``
   
     const response = {
       state: 1,
@@ -236,7 +236,7 @@ app.get('/dashboard/info1', (req, res) => {
     //return res.status(200).json(response);//ajax에게 줄때
   })//온습도데이터
   
-  app.get('/dashboard/info4', (req, res) => {
+  router.get('/dashboard/info4', (req, res) => {
   
     const response = {
       state: 1,
