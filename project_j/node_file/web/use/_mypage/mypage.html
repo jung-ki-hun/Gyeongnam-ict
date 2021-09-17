@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/mypage.css">
+    <script defer src="../../assets/js/css_main.js"></script>
+    <script defer src="../../assets/js/mypage.js"></script>
+</head>
+<body>
+    <!-- 상단바 -->	
+		<div class="main">
+			<!-- header -->
+			<header id="main-header"class="main">    
+				<a href="../../index.html"><img class="logo" src="../../images/logo/logo_transparent_wide.png">
+					<img class="logo-mini" src="../../images/logo/logo_transparent_mini.png"></a>
+				<!-- <div class="location">ss</div> -->
+				<ul class="menu-bar">
+					<li class="login"><a href="../../login.html">Login</a></li>
+					<li class="menu-button">Menu</li>
+				</ul>
+			</header>
+			<!-- action bar -->
+			<div class="action-bar">
+				<ul class="content">
+					<li>Main</li> 
+					<li>My Page</li>
+				</ul>
+				<i class="fas fa-square action-bar-button"></i>     
+			</div>
+			<!-- nav -->
+			<div id="menu-select">            
+				<ul>
+					<li class="menu-item myinfo">
+						<!-- nav-user -->
+						<div class="user">
+							<img src="../../images/main/default.png" alt="">
+							<span class="name">이름</span>
+							<span class="logout">로그아웃</span>
+							<span class="mail">이메일</span>
+						</div>
+						<!-- nav-link -->
+						<div class="link">
+							<a href="../../use/_mypage/mypage.html">내 정보</a>
+							<a href="">설정</a>                        
+						</div>
+					</li>
+					<br>
+				</ul>
+			</div>
+		</div>
+		<!-- my page area-->
+		<div class="mypage">
+			<div class="column">
+				<div id="user" class="box">
+					<span class="title">Profile</span><hr><br>
+					<span class="item">&middot; 이름</span><span id="name">이병진</span><br><br>
+					<span class="item">&middot; 생년월일</span><span id="birth">2001.12.14</span><br><br>
+					<span class="item">&middot; 등급</span><span id="class">Master</span><br><br>
+					<span class="item">&middot; 성별</span><span id="gender"></span>
+				</div>
+				<div class="box">
+					<span class="title">Private</span><hr><br>
+					<span class="item">&middot; Id</span><span id="id"></span><br><br>
+					<span class="item">&middot; Pw</span><span id="password"></span><br><br>
+					<span class="item">&middot; E-mail</span><span id="email"></span><br><br>
+					<span class="item">&middot; Address</span><span id="email"></span><br><br>
+					<span class="item">&middot; Tel</span><span id="tel"></span>
+				</div>
+			</div>
+			<div class="column">
+				<div id="machine" class="box">
+					<span class="title">Machine</span><hr>	
+					<fieldset class="device">
+						<legend>Home</legend>
+						<div id="home">
+							
+						</div>
+					</fieldset>
+					<fieldset class="device">
+						<legend>Factory</legend>
+						<div id="factroy">
+
+						</div>
+					</fieldset>
+					<fieldset class="device">
+						<legend>Office</legend>
+						<div id="office">
+							
+						</div>
+					</fieldset>
+				</div>
+				<div id="setting" class="box">
+					<span class="title">Setting</span><hr><br>
+					<span class="item">&middot; Background-Color</span><input type="color" id="background-color"></input><br><br>
+					<span class="item">&middot; Font</span><span id="font"></span><br><br>
+					<span class="item">&middot; Font-Size</span><span id="font-size"></span><br><br>
+
+				</div>
+			</div>	
+		</div>
+</body>
+</html>
