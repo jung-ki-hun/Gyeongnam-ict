@@ -76,7 +76,7 @@ app.get('/dashboard/info2', (req, res) => {
   }
   var pmvalue =0;
  
-  const air = require('./air');
+  const air = require('../project_j/node_file/api/air');
   //setInterval(air,5000000);
   let prov = req.query.prov ? req.query.prov : '경남';
   let region = req.query.region ? req.query.region : '삼방동';
