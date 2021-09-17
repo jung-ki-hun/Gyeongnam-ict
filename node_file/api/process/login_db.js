@@ -183,6 +183,8 @@ module.exports = {
         }
         catch (err) {
             console.log(`${jkh_fun.date_time()} : ${err}`)
+            //예외발생시에도 에러 호출 뒤에 홈페이지로 이동하게 함.(DotReNJu)
+            res.redirect('/');
         }
     },//로그아웃
 
