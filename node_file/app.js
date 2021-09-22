@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
 const dataset = {
 	port: 3000,
-	host: '127.0.0.1'
+	host: argv_ip||'127.0.0.1'
 }
 var db_info = db.getConnection();
 var sessionStore = new MySQLStore(db_info);
