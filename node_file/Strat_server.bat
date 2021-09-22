@@ -1,0 +1,3 @@
+:START
+nodemon app.js "192.168.219.107"
+@GOTO START
