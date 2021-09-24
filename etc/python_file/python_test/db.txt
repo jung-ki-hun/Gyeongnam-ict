@@ -1,8 +1,0 @@
-#mysql
-180.83.98.144
-prot 3306
-id root
-pw root
-
-#web server link
-http://180.83.98.144:3000/
