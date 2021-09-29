@@ -7,8 +7,7 @@ var router = express.Router();
 var jkh_db_config = require('./process/login_db');
 var jkh_suggest = require('./process/suggest_db');
 var jkh_product = require('./process/product_db');
-
-
+var jkh_air = require('./process/air_db');
 /*****************************/
 /******db 연결부 코드구현******/
 /*****************************/
