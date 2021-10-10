@@ -11,10 +11,10 @@ function alert1(name) {
 }
 function sendm() {
     const req = {
-        email: email.value == null ? alert1("email"):email.value,
-        name: name1.value== null ? alert1("name"):name1.value,
-        message: message.value == null ? alert1("message"):message.value,
-        title: title.value == null ? alert1("title"):title.value
+        email: email.value ,//== null ? alert1("email"):email.value,
+        name: name1.value ,//== null ? alert1("name"):name1.value,
+        message: message.value ,//== null ? alert1("message"):message.value,
+        title: title.value //== null ? alert1("title"):title.value
 
     };
 

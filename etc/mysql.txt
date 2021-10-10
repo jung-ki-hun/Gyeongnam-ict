@@ -1,0 +1,40 @@
+create TABLE user_databese (
+u_id int auto_increment not null,
+user_email VARCHAR(100),
+user_name VARCHAR(50),
+user_password VARCHAR(50),
+primary key(u_id)
+);
+create TABLE QRcode_database (
+count_number int primary KEY,
+name VARCHAR(30), 
+qr_code VARCHAR(30),
+QRcode_check bool,
+price int,
+stock int,
+Location VARCHAR(20)
+);
+create TABLE MarketList(
+ml_id int auto_increment not null,
+Market bool,
+UserName VARCHAR(30),
+Product VARCHAR(30),
+Mcount int,
+Mdate TIMESTAMP,
+primary key(ml_id)
+);
+create TABLE OrdergHistory(
+oh_id int auto_increment not null,
+price int,
+UserName VARCHAR(30),
+Mdate TIMESTAMP,
+primary key(oh_id)
+);
+create TABLE HomePage(
+hp_id int auto_increment not null,
+name VARCHAR(40),
+email VARCHAR(100),
+message BLOB,
+data TIMESTAMP,
+primary key(hp_id)
+);
