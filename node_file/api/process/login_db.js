@@ -115,7 +115,7 @@ module.exports = {
             return res.status(200).json(JSON.stringify(response));
         }//중복 항목 존재시..
         else {
-            let sql = 'INSERT into user_database values(?,?,?)';
+            let sql = 'INSERT into user_database(user_email,user_name,user_password) values(?,?,?)';
             await conn.query(sql, [req_data.email, req_data.name, req_data.pw], function (err, rows) {
                 if (err) {
                     console.log(`${jkh_fun.date_time()} : error => ${err}`);
