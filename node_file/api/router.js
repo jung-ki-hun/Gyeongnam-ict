@@ -22,6 +22,15 @@ db_config.connect(conn)
 /*****************************/
 
 //접근제한 관련 코드 작성
+router.post('/p/m/home',(req,res)=>{
+  if(req.session.user)
+  {
+     res.redirect(302,`/web/home_function.html`); 
+  }else
+  {
+      res.redirect(302,'/web/landing/home/home_explain.html');
+  }
+});
 router.post('/p/m/office',(req,res)=>{
     if(req.session.user)
     {
