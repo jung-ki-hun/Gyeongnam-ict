@@ -23,7 +23,6 @@
 // Visual Stduio Code                 //                                   //
 /////////////////////////////////////////////////////////////////////////////
 
-
 // 0_Car
 String Car_status = "0";
 //자동:시리얼받아옴
@@ -52,13 +51,14 @@ int bPin = 11;
 long delay1 = 2000;
 long lTime = 0;
 // 4_DEBUG_SERIAL
-void _0_intro_song(void) {
+void _0_intro_song(void)
+{
 	// put your setup code here, to run once:
-	
-		tone(bPin, 494, 150);
-		delay(250);
-		tone(bPin, 659, 150);
-		delay(250);
+
+	tone(bPin, 494, 150);
+	delay(250);
+	tone(bPin, 659, 150);
+	delay(250);
 	// int i = 0;
 	// for (i = 0; i < 4; i++) {
 	// 	tone(bPin, 494, 250);
@@ -108,72 +108,84 @@ void _0_intro_song(void) {
 	// 	tone(bPin, 659, 250);
 	// 	delay(250);
 	// }
-
-
 }
-void _0_Controll(void) {
+void _0_Controll(void)
+{
 	//수동조작시 값받아옴
-	if (Serial1.available()) {
+	if (Serial1.available())
+	{
 		Car_status = _4_readSerial1();
 	}
-	if (Serial.available()) {
+	if (Serial.available())
+	{
 		Car_status = _4_readSerial();
 	}
-	if (enable_auto) {
+	if (enable_auto)
+	{
 		_3_Block_Sensor();
-	} else {
+	}
+	else
+	{
 		Car_speed = Car_max_speed;
 	}
-	switch (Car_status.toInt()) {
-		case -2:
-				        //수동조작:거리센서
+	switch (Car_status.toInt())
+	{
+	case -2:
+		//수동조작:거리센서
 		enable_block = !(enable_block);
 		Car_status = "0";
 		break;
-		case -1:
-				        //수동조작:auto켜기
+	case -1:
+		//수동조작:auto켜기
 		enable_auto = !enable_auto;
-		if (enable_auto) {
+		if (enable_auto)
+		{
 			tone(bPin, 330, 100);
-		} else if (!enable_auto) {
+		}
+		else if (!enable_auto)
+		{
 			tone(bPin, 440, 100);
 		}
 		Car_status = "0";
 		break;
-		case 1:
-				        _1_Go(Car_speed);
-		enable_auto=1;
+	case 1:
+		_1_Go(Car_speed);
+		enable_auto = 1;
 		break;
-		case 2:
-				        _1_Stop();
+	case 2:
+		_1_Stop();
 		break;
-		case 3:
-				        _1_Back(Car_max_speed);
+	case 3:
+		_1_Back(Car_max_speed);
 		break;
-		case 4:
-				        _1_Left(255);
+	case 4:
+		_1_Left(255);
 		break;
-		case 5:
-				        _1_Right(255);
+	case 5:
+		_1_Right(255);
 		break;
-		case 6:
-				        if (Car_max_speed >= 255) {
+	case 6:
+		if (Car_max_speed >= 255)
+		{
 			tone(bPin, 800, 100);
 			Car_max_speed = 150;
-		} else {
+		}
+		else
+		{
 			tone(bPin, 1000, 100);
 			Car_max_speed = 255;
 		}
 		Car_status = "0";
 		break;
-		case 8:
-				        tone(bPin, 600, 100);
+	case 8:
+		tone(bPin, 600, 100);
 		Car_speed = Car_max_speed;
 		Car_status = "0";
 		break;
 	}
 }
-void _1_Stop(void) {
+void _1_Stop(void)
+{
 	digitalWrite(ALeft, HIGH);
 	digitalWrite(ARight, LOW);
 	analogWrite(ASpeed, 0);
@@ -181,7 +193,8 @@ void _1_Stop(void) {
 	digitalWrite(BRight, LOW);
 	analogWrite(BSpeed, 0);
 }
-void _1_Back(int speed) {
+void _1_Back(int speed)
+{
 	digitalWrite(ALeft, HIGH);
 	digitalWrite(ARight, LOW);
 	analogWrite(ASpeed, speed);
@@ -189,7 +202,8 @@ void _1_Back(int speed) {
 	digitalWrite(BRight, LOW);
 	analogWrite(BSpeed, speed);
 }
-void _1_Go(int speed) {
+void _1_Go(int speed)
+{
 	digitalWrite(ALeft, LOW);
 	digitalWrite(ARight, HIGH);
 	analogWrite(ASpeed, speed);
@@ -197,7 +211,8 @@ void _1_Go(int speed) {
 	digitalWrite(BRight, HIGH);
 	analogWrite(BSpeed, speed);
 }
-void _1_Left(int speed) {
+void _1_Left(int speed)
+{
 	digitalWrite(ALeft, HIGH);
 	digitalWrite(ARight, LOW);
 	analogWrite(ASpeed, speed);
@@ -205,7 +220,8 @@ void _1_Left(int speed) {
 	digitalWrite(BRight, HIGH);
 	analogWrite(BSpeed, speed);
 }
-void _1_Right(int speed) {
+void _1_Right(int speed)
+{
 	digitalWrite(ALeft, LOW);
 	digitalWrite(ARight, HIGH);
 	analogWrite(ASpeed, speed);
@@ -213,43 +229,58 @@ void _1_Right(int speed) {
 	digitalWrite(BRight, LOW);
 	analogWrite(BSpeed, speed);
 }
-void _2_Line(void) {
+void _2_Line(void)
+{
 }
-void _3_Block_Sensor(void) {
+void _3_Block_Sensor(void)
+{
 	// trigger 핀으로 10㎲의 펄스를 발생
 	digitalWrite(triggerPin, HIGH);
 	delayMicroseconds(10);
 	digitalWrite(triggerPin, LOW);
 	// echo 핀 입력으로부터 거리를 cm 단위로 계산
 	distance = pulseIn(echoPin, HIGH) / 58.2;
-	if (distance < 60) {
+	if (distance < 60)
+	{
 		Car_speed = Car_max_speed * 0;
 		delay1 = 50;
-	} else if (distance < 90) {
-		if (Car_max_speed >= 255) {
+	}
+	else if (distance < 90)
+	{
+		if (Car_max_speed >= 255)
+		{
 			Car_speed = Car_max_speed / 2.5;
 		}
 		delay1 = 100;
-	} else if (distance < 130) {
-		if (Car_max_speed >= 255) {
+	}
+	else if (distance < 130)
+	{
+		if (Car_max_speed >= 255)
+		{
 			Car_speed = Car_max_speed / 1.5;
 		}
 		delay1 = 300;
-	} else {
+	}
+	else
+	{
 		Car_speed = Car_max_speed;
 		delay1 = 1000;
 	}
-	if (millis() - lTime > delay1) {
+	if (millis() - lTime > delay1)
+	{
 		lTime = millis();
 		tone(bPin, 330, 100);
 	}
 }
-String _4_readSerial(void) {
+String _4_readSerial(void)
+{
 	String str = "";
 	char ch;
-	while (Serial.available() > 0) {
+	while (Serial.available() > 0)
+	{
 		ch = Serial.read();
-		if (ch != '\n') {
+		if (ch != '\n')
+		{
 			str.concat(ch);
 			Serial.print("Serial : ");
 			Serial.println(str);
@@ -259,12 +290,15 @@ String _4_readSerial(void) {
 	return str;
 	//return ch.toInt();
 }
-String _4_readSerial1(void) {
+String _4_readSerial1(void)
+{
 	String bstr = "";
 	char bch;
-	while (Serial1.available() > 0) {
+	while (Serial1.available() > 0)
+	{
 		bch = Serial1.read();
-		if (bch != '\n') {
+		if (bch != '\n')
+		{
 			bstr.concat(bch);
 			Serial.print("Serial1 : ");
 			Serial.println(bstr);
@@ -273,7 +307,8 @@ String _4_readSerial1(void) {
 	}
 	return bstr;
 }
-void setup() {
+void setup()
+{
 	// 0_Car
 	Serial1.begin(9600);
 	// 1_Motor
@@ -293,6 +328,7 @@ void setup() {
 	_1_Stop();
 	Car_speed = Car_max_speed;
 }
-void loop() {
+void loop()
+{
 	_0_Controll();
 }
