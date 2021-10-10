@@ -1,7 +1,7 @@
 
 $(document).ready(() => {
    $("#jkhsend-0").click(() => {
-      $("#offices").submit();
+      $("#home").submit();
    })
     $("#jkhsend-1").click(() => {
        $("#offices").submit();
