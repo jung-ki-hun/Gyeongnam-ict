@@ -54,55 +54,62 @@ long lTime = 0;
 // 4_DEBUG_SERIAL
 void _0_intro_song(void) {
 	// put your setup code here, to run once:
-	int i = 0;
-	for (i = 0; i < 4; i++) {
-		tone(bPin, 494, 250);
+	
+		tone(bPin, 494, 150);
 		delay(250);
-		tone(bPin, 659, 250);
+		tone(bPin, 659, 150);
 		delay(250);
-	}
-	delay(250);
-	for (i = 0; i < 3; i++) {
-		tone(bPin, 659, 210);
-		delay(250);
-		delay(250);
-	}
-	for (i = 784; i <= 831; i++) {
-		tone(bPin, i, 150);
-		delay(3);
-	}
-	delay(250 / 8 * 7);
-	delay(250 / 3);
-	tone(bPin, 554, 100 / 2);
-	delay(250 / 8 * 7);
-	tone(bPin, 554, 100 / 8 * 9);
-	delay(250 / 2);
-	tone(bPin, 554, 100 / 2);
-	delay(250 / 8 * 9);
-	tone(bPin, 554, 100 / 8 * 9);
-	delay(250);
-	tone(bPin, 523, 100 / 8 * 9);
-	delay(250);
-	tone(bPin, 494, 100 / 8 * 9);
-	delay(250);
-	delay(250);
-	tone(bPin, 932, 100);
-	delay(100);
-	tone(bPin, 988, 100);
-	delay(250 / 2 * 3);
-	for (i = 0; i < 3; i++) {
-		tone(bPin, 659, 210);
-		delay(250);
-		delay(250);
-	}
-	tone(bPin, 740, 150);
-	delay(250);
-	for (i = 0; i < 4; i++) {
-		tone(bPin, 494, 250);
-		delay(250);
-		tone(bPin, 659, 250);
-		delay(250);
-	}
+	// int i = 0;
+	// for (i = 0; i < 4; i++) {
+	// 	tone(bPin, 494, 250);
+	// 	delay(250);
+	// 	tone(bPin, 659, 250);
+	// 	delay(250);
+	// }
+	// delay(250);
+	// for (i = 0; i < 3; i++) {
+	// 	tone(bPin, 659, 210);
+	// 	delay(250);
+	// 	delay(250);
+	// }
+	// for (i = 784; i <= 831; i++) {
+	// 	tone(bPin, i, 150);
+	// 	delay(3);
+	// }
+	// delay(250 / 8 * 7);
+	// delay(250 / 3);
+	// tone(bPin, 554, 100 / 2);
+	// delay(250 / 8 * 7);
+	// tone(bPin, 554, 100 / 8 * 9);
+	// delay(250 / 2);
+	// tone(bPin, 554, 100 / 2);
+	// delay(250 / 8 * 9);
+	// tone(bPin, 554, 100 / 8 * 9);
+	// delay(250);
+	// tone(bPin, 523, 100 / 8 * 9);
+	// delay(250);
+	// tone(bPin, 494, 100 / 8 * 9);
+	// delay(250);
+	// delay(250);
+	// tone(bPin, 932, 100);
+	// delay(100);
+	// tone(bPin, 988, 100);
+	// delay(250 / 2 * 3);
+	// for (i = 0; i < 3; i++) {
+	// 	tone(bPin, 659, 210);
+	// 	delay(250);
+	// 	delay(250);
+	// }
+	// tone(bPin, 740, 150);
+	// delay(250);
+	// for (i = 0; i < 4; i++) {
+	// 	tone(bPin, 494, 250);
+	// 	delay(250);
+	// 	tone(bPin, 659, 250);
+	// 	delay(250);
+	// }
+
+
 }
 void _0_Controll(void) {
 	//수동조작시 값받아옴
