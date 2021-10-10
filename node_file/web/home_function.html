@@ -37,11 +37,69 @@
 
                 <div class="logo">
                     <a href="./index.html" class="logo">
-                        <img src="assets/images/logo-sm2.png" alt="" height="50">
+                        <img src="assets/images/1logo.png" alt="" height="70" width="300">
                     </a>
 
                 </div>
+                <div class="menu-extras topbar-custom">
 
+                    <!-- Search input -->
+                    <div class="search-wrap" id="search-wrap">
+                        <div class="search-bar">
+                            <input class="search-input" type="search" placeholder="Search" />
+                            <a href="#" class="close-search toggle-search" data-target="#search-wrap">
+                                <i class="mdi mdi-close-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <ul class="list-inline float-right mb-0">
+                        <!-- Search -->
+                        <!-- Fullscreen -->
+                        <li class="list-inline-item dropdown notification-list hide-phone">
+                            <a class="nav-link waves-effect" href="#" id="btn-fullscreen">
+                                <i class="mdi mdi-fullscreen noti-icon"></i>
+                            </a>
+                        </li>
+                        <!-- language-->
+                        <li class="list-inline-item dropdown notification-list hide-phone">
+                            <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#"
+                                role="button" aria-haspopup="false" aria-expanded="false">
+                                korea <img src="assets/images/flags/korea_flag.jpg" class="ml-2" height="16" alt="" />
+                            </a>
+
+                        </li>
+
+                        <!-- User-->
+                        <li class="list-inline-item dropdown notification-list">
+                            <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown"
+                                href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="mdi ion-android-social-user"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <form id=logout method="POST" action="/logout">
+                                    <a id = jkhsend-3 class="dropdown-item" href="#"><i class="dripicons-exit text-muted"></i>
+                                        Logout</a>
+
+                                </form>
+                            </div>
+                        </li>
+                        <li class="menu-item list-inline-item">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+                    </ul>
+                </div>
+                <!-- end menu-extras -->
+
+                <div class="clearfix"></div>
 
             </div> <!-- end container -->
         </div>
