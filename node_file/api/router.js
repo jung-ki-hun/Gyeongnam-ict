@@ -174,7 +174,7 @@ router.get('/dashboard/info1', (req, res) => {
       query: null,
       msg: 'Succesful'
     }
-    var sql = 'SELECT AIR_database.misae FROM AIR_database WHERE obid=1;'//가져오기
+    var sql = 'SELECT air_database.misae FROM air_database WHERE obid=1;'//가져오기
     //console.log(sql);
     
     conn.query(sql, function (err, results, field) {
