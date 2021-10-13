@@ -176,7 +176,7 @@ router.get('/dashboard/info1', (req, res) => {
     }
     var sql = 'SELECT air_database.misae FROM air_database WHERE obid=1;'//가져오기
     //console.log(sql);
-    
+    console.log("info1 실행은 됨")
     conn.query(sql, function (err, results, field) {
     
       let json1 =  results[0].misae;
@@ -190,17 +190,18 @@ router.get('/dashboard/info1', (req, res) => {
   
   
     //return res.status(200).json(response);
+    
   })//공기청정기 데이터
   
   router.get('/dashboard/info2', (req, res) => {
-  
+  /*
     const response = {
       state: 1,
       query: null,
       msg: 'Succesful'
     }
     var pmvalue =0;
-   
+    console.log("info2 실행은 됨");
     const air = require('./air');
     //setInterval(air,5000000);
     let prov = req.query.prov ? req.query.prov : '경남';
@@ -220,28 +221,31 @@ router.get('/dashboard/info1', (req, res) => {
     response.query = pmvalue ==0?"38"+"㎍/m³":pmvalue+"㎍/m³";//일일트래픽 다써서 가라침..
   
     return res.status(200).json(response);
+    */
   })//환경공단 미세먼지 (pm25 , 경남, 삼방동) 데이터 //일일트래픽 다씀
   
-  router.get('/dashboard/info3', (req, res) => {``
+  router.get('/dashboard/info3', (req, res) => {
   
     const response = {
       state: 1,
       query: null,
       msg: 'Succesful'
     }
-    
+    var sql = 'SELECT * FROM air_database WHERE obid=1;'//가져오기
     //console.log(sql);
-    
+    console.log("info3 실행은 됨");
     conn.query(sql, function (err, results, field) {
       let json1 =  results[0].temperature+"˚ / ";//30.5
       let json2 =  results[0].humidity+"%";//30.5
       response.query = json1+json2; // 결과 가져오기
       //console.log(response.query)
       //return res.send(response.query)
+      
       return res.status(200).json(response)
     })
   
     //return res.status(200).json(response);//ajax에게 줄때
+    
   })//온습도데이터
   
   router.get('/dashboard/info4', (req, res) => {
@@ -251,9 +255,9 @@ router.get('/dashboard/info1', (req, res) => {
       query: null,
       msg: 'Succesful'
     }
-    var sql = 'SELECT AIR_database.misae FROM AIR_database WHERE obid=1;'//가져오기
+    var sql = 'SELECT AIR_database.misae FROM air_database WHERE obid=1;'//가져오기
     //console.log(sql);
-    
+    console.log("info4 실행은 됨");
     conn.query(sql, function (err, results, field) {
       let json1 = 30.5;
       response.query = json1+"㎍/m³"; // 결과 가져오기
@@ -263,6 +267,7 @@ router.get('/dashboard/info1', (req, res) => {
     })
   
     //return res.status(200).json(response);//ajax에게 줄때
+    
   })//평균농도
 
 module.exports = router;

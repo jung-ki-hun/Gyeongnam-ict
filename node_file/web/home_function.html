@@ -145,7 +145,7 @@
 
         function changeImage() {
             $.ajax({
-                url: 'http://52.78.78.72:81/dashboard/button',
+                url: 'http://180.83.98.139:3000/dashboard/button',
                 cache: false,
                 dataType: 'json',
                 type: "GET",
@@ -196,13 +196,13 @@
             <div class="row">
                 <div class="col-md-6 col-xl-3">
                     <div class="mini-stat widget-chart-sm clearfix bg-white">
-                        <img src="images/logo/logo2.png" align="left">
+                        <img src="images/logo/logo2.png" width="213" height="70" align="left">
                         <div class="mini-stat-info text-right">
                             <span class="counter text-info">공기 청정기</span>
 
                         </div>
                         <div class="mini-stat-info text-right">
-                            <span id='find-matters-dp' class="counter text-info">0000</span>
+                            <span id='find-matters-dp1' class="counter text-info">0000</span>
 
                         </div>
 
@@ -375,7 +375,7 @@
 
 
                     $.ajax({
-                        url: 'http://52.78.78.72:81/dashboard/info2',
+                        url: 'http://180.83.98.139:3000/dashboard/info2',
                         cache: false,
                         dataType: 'json',
                         type: "GET",
@@ -393,7 +393,7 @@
 
 
                     reqAir();
-                }, 500);
+                }, 2000);
             }
             reqAir();
 
@@ -410,7 +410,7 @@
                 setTimeout(function () {
 
                     $.ajax({
-                        url: 'http://180.83.98.139:3000/dashboard/info1',
+                        url: '/dashboard/info1',
                         cache: false,
                         dataType: 'json',
                         type: "GET",
@@ -419,14 +419,14 @@
                         },
                         success: function (data) {
                             console.log("success!", data);
-                            $('#find-matters-dp').html(data.query);
+                            $('#find-matters-dp1').html(data.query);
 
                         }//공기청정기
                     });
 
 
                     $.ajax({
-                        url: 'http://180.83.98.139:3000/dashboard/info3',
+                        url: '/dashboard/info3',
                         cache: false,
                         dataType: 'json',
                         type: "GET",
@@ -443,7 +443,7 @@
                     });
 
                     $.ajax({
-                        url: 'http://180.83.98.139:3000/dashboard/info4',
+                        url: '/dashboard/info4',
                         cache: false,
                         dataType: 'json',
                         type: "GET",
@@ -460,7 +460,7 @@
 
 
                     reqAir();
-                }, 500);
+                }, 2000);
             }
             reqAir();
 
