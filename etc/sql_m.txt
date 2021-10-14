@@ -11,7 +11,7 @@ qr_code_check VARCHAR(30),
 qr_code_cam VARCHAR(30),
 machine_state int
 )
-create TABLE project.user_databese (
+create TABLE project.user_database (
 user_email VARCHAR(100),
 user_name VARCHAR(50),
 user_password VARCHAR(50)

@@ -1,4 +1,4 @@
-create TABLE user_databese (
+create TABLE user_database (
 u_id int auto_increment not null,
 user_email VARCHAR(100),
 user_name VARCHAR(50),
