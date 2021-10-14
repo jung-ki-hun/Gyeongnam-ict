@@ -7,7 +7,7 @@ var response = {
 
 module.exports = {
     addsuggest: async (req, res, conn, data_sug) => {
-        let sql = 'INSERT into homepage (name, email, message, title, timedata) values(?,?,?,?,?)';
+        let sql = 'INSERT into homepage (name, email, message, title, data) values(?,?,?,?,?)';
         conn.query(sql, [data_sug.name, data_sug.email, data_sug.msg, data_sug.title, jkh_fun.date_time()], function (err) {
             try {
                 if (err) {
