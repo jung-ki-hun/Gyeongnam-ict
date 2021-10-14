@@ -15,7 +15,7 @@ $(document).ready(() => {
                 $.each(test, function (key, value) {
                     str += `<tr>
                     <td>
-                        <a href="#" id="${value.Number}" class="font-600 text-muted">#${value.Number}</a></td>
+                        <a href="#" id="${value.oh_id}" class="font-600 text-muted">#${value.oh_id}</a></td>
                     <td>${value.price} 원</td>
                     <td>${value.Mdate}</td>
                     <td>${value.UserName}</td>
