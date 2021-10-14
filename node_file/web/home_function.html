@@ -140,7 +140,7 @@
         </div> <!-- end navbar-custom -->
     </header>
     <!-- End Navigation Bar-->
-    <script>
+    <!-- <script>
         state = 0;
 
         function changeImage() {
@@ -169,7 +169,7 @@
 
 
         }
-    </script>
+    </script> -->
     <!-- page wrapper start --><!-- 탭이 없음-->
     <div class="wrapper">
         <div class="container-fluid" id="result">
@@ -184,10 +184,10 @@
                                 <li class="breadcrumb-item active">Main</li>
                             </ol>
                         </div>
-                        <form id="onoff" action="/dashboard/button" method="POST">
+                        <!-- <form id="onoff" action="/dashboard/button" method="POST">
                             <h4 class="page-title">동작하기 <img id="image" onclick="changeImage()" type="sbmit" border=0
                                     src="images/logo/power2.png"> </h4>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-3">
+                <!-- <div class="col-md-6 col-xl-3">
                     <div class="mini-stat widget-chart-sm clearfix bg-white">
                         <img src="images/logo/airlogo.png" width="213" height="70" align="left">
                         <div class="mini-stat-info text-right">
@@ -224,7 +224,7 @@
                         <div class="clearfix"></div>
                         <span class="pull-right">미세먼지 농도</span>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-md-6 col-xl-3">
                     <div class="mini-stat widget-chart-sm clearfix bg-white">
                         <img src="images/logo/temp3.png" align="left">
@@ -240,7 +240,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-3">
+                <!-- <div class="col-md-6 col-xl-3">
                     <div class="mini-stat widget-chart-sm clearfix bg-white">
                         <img src="images/logo/graph1.png" align="left">
                         <div class="mini-stat-info text-right">
@@ -254,11 +254,11 @@
 
                         <span class="pull-right">평균 농도</span>
                     </div>
-                </div>
+                </div> -->
 
             </div>
             <div class="row">
-
+<!-- 
                 <div class="col-xl-3">
                     <div class="card m-b-20">
                         <div class="card-body">
@@ -276,7 +276,7 @@
                             <div id="morris-donut-example" class="morris-charts" style="height: 300px"></div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="col-xl-6">
                     <div class="card m-b-20">
@@ -367,7 +367,7 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
     <!--<script src="assets/js/ajax.js"></script> -->
-    <script>
+    <!-- <script>
         $(function () {
 
             function reqAir() {
@@ -402,7 +402,7 @@
             });
 
         })
-    </script>
+    </script> -->
     <script>
         $(function () {
 
@@ -442,21 +442,21 @@
                         }
                     });
 
-                    $.ajax({
-                        url: '/dashboard/info4',
-                        cache: false,
-                        dataType: 'json',
-                        type: "GET",
-                        error: function (error) {
-                            console.log("Error!", error);
-                        },
-                        success: function (data) {
-                            console.log("success!", data);
+                    // $.ajax({
+                    //     url: '/dashboard/info4',
+                    //     cache: false,
+                    //     dataType: 'json',
+                    //     type: "GET",
+                    //     error: function (error) {
+                    //         console.log("Error!", error);
+                    //     },
+                    //     success: function (data) {
+                    //         console.log("success!", data);
 
-                            $('#find-matters-dp4').html(data.query);
+                    //         $('#find-matters-dp4').html(data.query);
 
-                        }
-                    });
+                    //     }
+                    // });
 
 
                     reqAir();
