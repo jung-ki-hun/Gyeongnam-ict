@@ -78,7 +78,8 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <form id=logout method="POST" action="/logout">
-                                    <a id = jkhsend-3 class="dropdown-item" href="#"><i class="dripicons-exit text-muted"></i>
+                                    <a id=jkhsend-3 class="dropdown-item" href="#"><i
+                                            class="dripicons-exit text-muted"></i>
                                         Logout</a>
 
                                 </form>
@@ -113,10 +114,10 @@
                     <ul class="navigation-menu">
 
                         <li class="has-submenu active">
-                            <a href="/dashboard-2.html"><i class="mdi mdi-view-dashboard"></i>공기청정기</a>
+                            <a href="./home_function.html"><i class="mdi mdi-view-dashboard"></i>공기청정기</a>
 
                         </li>
-<!-- 
+                        <!-- 
                         <li class="has-submenu">
                             <a href="maps-google.html"><i class="mdi mdi-cube-outline"></i>오시는 길</a>
                             <ul class="submenu">
@@ -170,7 +171,8 @@
 
         }
     </script> -->
-    <!-- page wrapper start --><!-- 탭이 없음-->
+    <!-- page wrapper start -->
+    <!-- 탭이 없음-->
     <div class="wrapper">
         <div class="container-fluid" id="result">
             <link rel="stylesheet" href="assets/plugins/morris/morris.css">
@@ -258,7 +260,7 @@
 
             </div>
             <div class="row">
-<!-- 
+                <!-- 
                 <div class="col-xl-3">
                     <div class="card m-b-20">
                         <div class="card-body">
@@ -410,10 +412,8 @@
                         success: function (data) {
                             console.log("success!", data);
                             $('#find-matters-dp1').html(data.query);
-
                         }//공기청정기
                     });
-
 
                     $.ajax({
                         url: '/dashboard/info3',
@@ -425,10 +425,7 @@
                         },
                         success: function (data) {
                             console.log("success!", data);
-
                             $('#find-matters-dp3').html(data.query);
-
-
                         }
                     });
 
@@ -447,8 +444,6 @@
 
                     //     }
                     // });
-
-
                     reqAir();
                 }, 2000);
             }
