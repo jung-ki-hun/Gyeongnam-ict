@@ -34,7 +34,7 @@ Mcount int,
 Mdate TIMESTAMP,
 primary key(SNo)
 );
-create TABLE project.OrdergHistory(
+create TABLE project.OrderHistory(
 Number int AUTO_INCREMENT,
 price int,
 UserName VARCHAR(30),

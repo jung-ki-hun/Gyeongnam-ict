@@ -23,7 +23,7 @@ Mcount int,
 Mdate TIMESTAMP,
 primary key(ml_id)
 );
-create TABLE OrdergHistory(
+create TABLE OrderHistory(
 oh_id int auto_increment not null,
 price int,
 UserName VARCHAR(30),
