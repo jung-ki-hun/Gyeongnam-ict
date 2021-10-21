@@ -8,7 +8,6 @@ var MySQLStore = require("express-mysql-session")(session);
 var router = require(`./api/router.js`);
 var expressErrorHandler = require('express-error-handler');
 
-
 var argv_ip = process.argv[2];
 const app = express();
 app.use(express.json());
