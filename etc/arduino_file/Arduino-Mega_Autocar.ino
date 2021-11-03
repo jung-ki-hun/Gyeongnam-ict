@@ -39,6 +39,15 @@ int ARight = 23;
 int BRight = 24;
 int BLeft = 25;
 int BSpeed = 3;
+
+// add Motor driver
+int CSpeed = 4;
+int CLeft = 26;
+int CRight = 28;
+int DRight = 30;
+int DLeft = 32;
+int DSpeed = 5;
+ 
 // 2_LineSensor
 // 3_BlockSensor
 int enable_block = 0;
@@ -171,6 +180,13 @@ void _1_Stop(void) {
 	digitalWrite(BLeft, HIGH);
 	digitalWrite(BRight, LOW);
 	analogWrite(BSpeed, 0);
+	
+	digitalWrite(CLeft, HIGH);
+	digitalWrite(CRight, LOW);
+	analogWrite(CSpeed, 0);
+	digitalWrite(DLeft, HIGH);
+	digitalWrite(DRight, LOW);
+	analogWrite(DSpeed, 0);
 }
 void _1_Back(int speed) {
 	digitalWrite(ALeft, HIGH);
@@ -179,6 +195,13 @@ void _1_Back(int speed) {
 	digitalWrite(BLeft, HIGH);
 	digitalWrite(BRight, LOW);
 	analogWrite(BSpeed, speed);
+
+	digitalWrite(CLeft, HIGH);
+	digitalWrite(CRight, LOW);
+	analogWrite(CSpeed, speed);
+	digitalWrite(DLeft, HIGH);
+	digitalWrite(DRight, LOW);
+	analogWrite(DSpeed, speed);
 }
 void _1_Go(int speed) {
 	digitalWrite(ALeft, LOW);
@@ -187,6 +210,13 @@ void _1_Go(int speed) {
 	digitalWrite(BLeft, LOW);
 	digitalWrite(BRight, HIGH);
 	analogWrite(BSpeed, speed);
+
+	digitalWrite(CLeft, LOW);
+	digitalWrite(CRight, HIGH);
+	analogWrite(CSpeed, speed);
+	digitalWrite(DLeft, LOW);
+	digitalWrite(DRight, HIGH);
+	analogWrite(DSpeed, speed);
 }
 void _1_Left(int speed) {
 	digitalWrite(ALeft, HIGH);
@@ -195,6 +225,13 @@ void _1_Left(int speed) {
 	digitalWrite(BLeft, LOW);
 	digitalWrite(BRight, HIGH);
 	analogWrite(BSpeed, speed);
+
+	digitalWrite(CLeft, HIGH);
+	digitalWrite(CRight, LOW);
+	analogWrite(CSpeed, speed);
+	digitalWrite(DLeft, LOW);
+	digitalWrite(DRight, HIGH);
+	analogWrite(DSpeed, speed);
 }
 void _1_Right(int speed) {
 	digitalWrite(ALeft, LOW);
@@ -203,6 +240,13 @@ void _1_Right(int speed) {
 	digitalWrite(BLeft, HIGH);
 	digitalWrite(BRight, LOW);
 	analogWrite(BSpeed, speed);
+
+	digitalWrite(CLeft, LOW);
+	digitalWrite(CRight, HIGH);
+	analogWrite(CSpeed, speed);
+	digitalWrite(DLeft, HIGH);
+	digitalWrite(DRight, LOW);
+	analogWrite(DSpeed, speed);
 }
 void _2_Line(void) {
 }
