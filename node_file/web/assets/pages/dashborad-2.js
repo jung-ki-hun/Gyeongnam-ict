@@ -114,6 +114,9 @@
             $('.peity-donut').each(function() {
                 $(this).peity("donut", $(this).data());
             });
+            $('.peity-bar').each(function() {
+                $(this).peity("bar", $(this).data());
+            });
 
         },
         //init
