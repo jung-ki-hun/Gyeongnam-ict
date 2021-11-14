@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
 const dataset = {
-	port: 3000,
+	port: 80,
 	host: argv_ip||'127.0.0.1'
 }
 var db_info = db.getConnection();
