@@ -82,12 +82,12 @@
             this.createAreaChart('morris-area-example', 0, 0, $areaData, 'y', ['a', 'b', 'c'], ['미세먼지', '초미세먼지', '이산화질소'], ['#009688', '#fb8c00', '#6d60b0']);
 
             //creating donut chart
-            var $donutData = [
-                //{label: "Marketing", value: 12},
-                {label: "Offline", value: 40},
-                {label: "Online", value: 60}
-            ];
-            this.createDonutChart('morris-donut-example', $donutData, ['#f0f1f4', '#6d60b0', '#009688']);
+            // var $donutData = [
+            //     //{label: "Marketing", value: 12},
+            //     {label: "Offline", value: 40},
+            //     {label: "Online", value: 60}
+            // ];
+            // this.createDonutChart('morris-donut-example', $donutData, ['#f0f1f4', '#6d60b0', '#009688']);
 
             var $stckedData  = [
                 { y: '초미세먼지', a: 15, b: 35, c: 75, d:76},
