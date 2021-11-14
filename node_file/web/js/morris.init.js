@@ -81,18 +81,8 @@ $(document).ready(() => {
                             this.createDonutChart('morris-donut-example', $donutData, ['#FF0000', '#FF5E00', '#FFBB00', '#FFE400']);
 
                             var $stckedData = [
-                                { y: 'pencil', a: test[0].product },
-                                { y: 'eraser', a: test[1].product },
-                                { y: 'note', a: test[2].product },
-                                { y: 'highlighter', a: test[3].product },
-                                { y: 'television', a: test[4].product },
-                                { y: 'microwave', a: test[5].product },
-                                { y: 'monitor', a: test[6].product },
-                                { y: 'kimchi fridge', a: test[7].product },
-                                { y: 'apple', a: test[8].product },
-                                { y: 'banana', a: test[9].product },
-                                { y: 'grape', a: test[10].product },
-                                { y: 'oarange', a: test[11].product }
+                                { y: 'name01', a: test[0].stock },
+                                { y: 'name02', a: test[1].stock }
                             ];
                             this.createStackedChart('morris-bar-stacked', $stckedData, 'y', ['a'], ['sell'], ['#009688', '#4ac18e']);
 
