@@ -1,3 +1,3 @@
 :START
-node app 192.168.219.107
+node ./node_file/app 192.168.219.107
 @GOTO START
